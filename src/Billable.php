@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Cashier;
+namespace Laravel\Cashier\Braintree;
 
 use Exception;
 use Carbon\Carbon;
@@ -80,7 +80,7 @@ trait Billable
      *
      * @param  string  $subscription
      * @param  string  $plan
-     * @return \Laravel\Cashier\SubscriptionBuilder
+     * @return \Laravel\Cashier\Braintree\SubscriptionBuilder
      */
     public function newSubscription($subscription, $plan)
     {
@@ -147,7 +147,7 @@ trait Billable
      * Get a subscription instance by name.
      *
      * @param  string  $subscription
-     * @return \Laravel\Cashier\Subscription|null
+     * @return \Laravel\Cashier\Braintree\Subscription|null
      */
     public function subscription($subscription = 'default')
     {
@@ -173,7 +173,7 @@ trait Billable
      * Find an invoice by ID.
      *
      * @param  string  $id
-     * @return \Laravel\Cashier\Invoice|null
+     * @return \Laravel\Cashier\Braintree\Invoice|null
      */
     public function findInvoice($id)
     {
@@ -194,7 +194,7 @@ trait Billable
      * Find an invoice or throw a 404 error.
      *
      * @param  string  $id
-     * @return \Laravel\Cashier\Invoice
+     * @return \Laravel\Cashier\Braintree\Invoice
      */
     public function findInvoiceOrFail($id)
     {
@@ -425,7 +425,7 @@ trait Billable
         if (! $response->success) {
             throw new Exception('Unable to create Braintree customer: '.$response->message);
         }
-        
+
         $this->braintree_id = $response->customer->id;
 
         $paymentMethod = $this->paymentMethod();

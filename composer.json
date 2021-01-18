@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Laravel\\Cashier\\": "src/"
+            "Laravel\\Cashier\\Braintree\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Laravel\\Cashier\\Tests\\": "tests/"
+            "Laravel\\Cashier\\Braintree\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -42,7 +42,7 @@
         },
         "laravel": {
             "providers": [
-                "Laravel\\Cashier\\CashierServiceProvider"
+                "Laravel\\Cashier\\Braintree\\CashierServiceProvider"
             ]
         }
     },

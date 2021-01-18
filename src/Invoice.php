@@ -1,6 +1,6 @@
 <?php
 
-namespace Laravel\Cashier;
+namespace Laravel\Cashier\Braintree;
 
 use Carbon\Carbon;
 use Dompdf\Dompdf;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravel\Cashier\Tests;
+namespace Laravel\Cashier\Braintree\Tests;
 
 use Illuminate\Http\Request;
 use PHPUnit_Framework_TestCase;
-use Laravel\Cashier\Http\Controllers\WebhookController;
+use Laravel\Cashier\Braintree\Http\Controllers\WebhookController;
 
 class WebhookControllerTest extends PHPUnit_Framework_TestCase
 {

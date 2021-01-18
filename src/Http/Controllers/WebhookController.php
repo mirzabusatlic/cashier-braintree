@@ -1,10 +1,10 @@
 <?php
 
-namespace Laravel\Cashier\Http\Controllers;
+namespace Laravel\Cashier\Braintree\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
-use Laravel\Cashier\Subscription;
+use Laravel\Cashier\Braintree\Subscription;
 use Braintree\WebhookNotification;
 use Illuminate\Routing\Controller;
 use Symfony\Component\HttpFoundation\Response;
@@ -88,7 +88,7 @@ class WebhookController extends Controller
      * Get the model for the given subscription ID.
      *
      * @param  string  $subscriptionId
-     * @return \Laravel\Cashier\Subscription
+     * @return \Laravel\Cashier\Braintree\Subscription
      */
     protected function getSubscriptionById($subscriptionId)
     {
